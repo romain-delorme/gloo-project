@@ -16,6 +16,7 @@
       <COMP relation="OwnedElement">
         <COMPID name="Board" mc="Standard.Class" uid="d6ddf743-3bc3-4758-9dce-cc05a09e7b0b"/>
         <COMPID name="Square" mc="Standard.Class" uid="0fb0db15-549e-4d8d-9391-95296e841d5e"/>
+        <COMPID name="Player" mc="Standard.Class" uid="b6eca3c9-88e9-426e-88cf-d96ea7721afc"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="slidingblock Class diagram" mc="Standard.ClassDiagram" uid="2d2bf27c-0efe-4aaf-aa06-1d830bc01410"/>
