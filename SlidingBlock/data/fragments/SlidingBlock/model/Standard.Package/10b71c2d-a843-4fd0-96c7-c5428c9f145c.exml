@@ -15,9 +15,18 @@
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
         <COMPID name="Board" mc="Standard.Class" uid="d6ddf743-3bc3-4758-9dce-cc05a09e7b0b"/>
-        <COMPID name="Square" mc="Standard.Class" uid="0fb0db15-549e-4d8d-9391-95296e841d5e"/>
         <COMPID name="Player" mc="Standard.Class" uid="b6eca3c9-88e9-426e-88cf-d96ea7721afc"/>
+        <COMPID name="AbstractSquare" mc="Standard.Class" uid="4ff4c585-2998-4db7-81c6-c8e96e453d44"/>
+        <COMPID name="Wall" mc="Standard.Class" uid="92387254-df1a-470f-a6b0-388d77e80129"/>
+        <COMPID name="Square" mc="Standard.Class" uid="08490f4e-9565-42b3-ae53-262d6e86ef88"/>
+        <COMPID name="Exit" mc="Standard.Class" uid="0208252f-c65a-46ed-91c2-f9d92a437def"/>
+        <COMPID name="Position" mc="Standard.Class" uid="a9b29eca-7f72-4b01-a41d-f6b4ecf1b68f"/>
+        <COMPID name="BlocElementaire" mc="Standard.Class" uid="812a3bfd-9b2b-4516-bb74-fa322bbac424"/>
+        <COMPID name="Block" mc="Standard.Class" uid="6881afc6-b21b-44b0-928b-508edf3ca60a"/>
       </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
       <COMP relation="Product">
         <COMPID name="slidingblock Class diagram" mc="Standard.ClassDiagram" uid="2d2bf27c-0efe-4aaf-aa06-1d830bc01410"/>
       </COMP>
