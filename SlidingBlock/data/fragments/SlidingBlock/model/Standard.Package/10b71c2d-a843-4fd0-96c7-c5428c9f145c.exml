@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="slidingblock" version="4">
+  <OBJECT>
+    <ID name="slidingblock" mc="Standard.Package" uid="10b71c2d-a843-4fd0-96c7-c5428c9f145c"/>
+    <PID name="SlidingBlock" mc="Standard.Project" uid="cb2c8e50-7b50-483b-98e8-4f93eb8c1ffa"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[slidingblock]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Board" mc="Standard.Class" uid="d6ddf743-3bc3-4758-9dce-cc05a09e7b0b"/>
+        <COMPID name="Square" mc="Standard.Class" uid="0fb0db15-549e-4d8d-9391-95296e841d5e"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="slidingblock Class diagram" mc="Standard.ClassDiagram" uid="2d2bf27c-0efe-4aaf-aa06-1d830bc01410"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
