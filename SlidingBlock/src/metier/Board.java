@@ -1,7 +1,9 @@
 package metier;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("d6ddf743-3bc3-4758-9dce-cc05a09e7b0b")
@@ -13,9 +15,9 @@ public class Board {
     private int nbColumns;
 
     @objid ("f041af64-059a-44b9-8afb-19b0ff68fc05")
-    private List<AbstractSquare> squares = new ArrayList<AbstractSquare> ();
+    private Map<Position, AbstractSquare> squares = new HashMap<Position, AbstractSquare> ();
 
     @objid ("0e6abeae-5246-471f-9ed4-dc48b96d0573")
-    private List<Block> blocks = new ArrayList<Block> ();
+    private Map<Integer, Block> blocks = new HashMap<Integer, Block> ();
 
 }
