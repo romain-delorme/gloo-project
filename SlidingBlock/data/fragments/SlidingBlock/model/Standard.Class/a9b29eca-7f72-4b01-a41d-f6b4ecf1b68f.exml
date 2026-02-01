@@ -260,7 +260,7 @@ Position other = (Position) obj;
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="04b13832-02e9-4dbb-82e2-386b9af32574"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="189b3179-aeb9-477b-a721-7585e3d87d59"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -314,7 +314,7 @@ Position other = (Position) obj;
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="be1e6e4e-1c02-4079-8769-7e6cb3bfd7ec"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="ab3c2f0d-10ff-487d-bd9d-7a2686969a9a"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
