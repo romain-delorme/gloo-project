@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Project" version="4">
+  <OBJECT>
+    <ID name="Project" mc="Standard.Package" uid="962f0a3c-0c80-4845-9fcf-e5a383f7138d"/>
+    <PID name="SlidingBlock" mc="Standard.Project" uid="cb2c8e50-7b50-483b-98e8-4f93eb8c1ffa"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Project]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="metier" mc="Standard.Package" uid="10b71c2d-a843-4fd0-96c7-c5428c9f145c"/>
+        <COMPID name="control" mc="Standard.Package" uid="7dd87517-703c-4b48-bfc6-6c071e106209"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

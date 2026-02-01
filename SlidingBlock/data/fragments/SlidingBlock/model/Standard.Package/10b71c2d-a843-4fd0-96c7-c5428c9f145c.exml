@@ -1,21 +1,20 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="slidingblock" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="metier" version="4">
   <OBJECT>
-    <ID name="slidingblock" mc="Standard.Package" uid="10b71c2d-a843-4fd0-96c7-c5428c9f145c"/>
-    <PID name="SlidingBlock" mc="Standard.Project" uid="cb2c8e50-7b50-483b-98e8-4f93eb8c1ffa"/>
+    <ID name="metier" mc="Standard.Package" uid="10b71c2d-a843-4fd0-96c7-c5428c9f145c"/>
+    <PID name="Project" mc="Standard.Package" uid="962f0a3c-0c80-4845-9fcf-e5a383f7138d"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
       <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[slidingblock]]></ATT>
+      <ATT name="Name"><![CDATA[metier]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
         <COMPID name="Board" mc="Standard.Class" uid="d6ddf743-3bc3-4758-9dce-cc05a09e7b0b"/>
-        <COMPID name="Player" mc="Standard.Class" uid="b6eca3c9-88e9-426e-88cf-d96ea7721afc"/>
         <COMPID name="AbstractSquare" mc="Standard.Class" uid="4ff4c585-2998-4db7-81c6-c8e96e453d44"/>
         <COMPID name="Wall" mc="Standard.Class" uid="92387254-df1a-470f-a6b0-388d77e80129"/>
         <COMPID name="Square" mc="Standard.Class" uid="08490f4e-9565-42b3-ae53-262d6e86ef88"/>
@@ -23,12 +22,63 @@
         <COMPID name="Position" mc="Standard.Class" uid="a9b29eca-7f72-4b01-a41d-f6b4ecf1b68f"/>
         <COMPID name="BlocElementaire" mc="Standard.Class" uid="812a3bfd-9b2b-4516-bb74-fa322bbac424"/>
         <COMPID name="Block" mc="Standard.Class" uid="6881afc6-b21b-44b0-928b-508edf3ca60a"/>
+        <OBJECT>
+          <ID name="Direction" mc="Standard.Enumeration" uid="edec4194-f5c4-4df0-9b09-05c41befbc8c"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Direction]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="UP" mc="Standard.EnumerationLiteral" uid="d275dfe5-0b79-4a23-a07e-fc9e3fa0a724"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[UP]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="DOWN" mc="Standard.EnumerationLiteral" uid="93e8e217-91b2-4948-888b-810b2331746f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[DOWN]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="LEFT" mc="Standard.EnumerationLiteral" uid="9c0dcb8b-bf9a-4355-8986-a82f726de578"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[LEFT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="RIGHT" mc="Standard.EnumerationLiteral" uid="48521349-806b-4a35-94a3-0faf3f05f833"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[RIGHT]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
       </LINK>
       <COMP relation="Product">
-        <COMPID name="slidingblock Class diagram" mc="Standard.ClassDiagram" uid="2d2bf27c-0efe-4aaf-aa06-1d830bc01410"/>
+        <COMPID name="metier Class diagram" mc="Standard.ClassDiagram" uid="2d2bf27c-0efe-4aaf-aa06-1d830bc01410"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

@@ -10,7 +10,7 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="Model">
-        <COMPID name="slidingblock" mc="Standard.Package" uid="10b71c2d-a843-4fd0-96c7-c5428c9f145c"/>
+        <COMPID name="Project" mc="Standard.Package" uid="962f0a3c-0c80-4845-9fcf-e5a383f7138d"/>
       </COMP>
       <COMP relation="DiagramRoot">
         <COMPID name="SlidingBlock" mc="Infrastructure.DiagramSet" uid="996ebbe2-a848-4690-8165-5ad0978211cf"/>
