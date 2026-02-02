@@ -7,4 +7,10 @@ public class Exit extends AbstractSquare {
 	public String toString() {
 		return "S";
 	}
+
+	public Exit(Position position, Board board){
+        super.position = position;
+        super.board = board;
+        super.blocElementaire = null;
+    }
 }

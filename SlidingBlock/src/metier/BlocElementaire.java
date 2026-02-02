@@ -13,4 +13,12 @@ public class BlocElementaire {
     public String toString() {
     	return this.block.toString();
     }
+
+    public void setBlock(Block block){
+        this.block = block;
+    }
+
+    public BlocElementaire(AbstractSquare square){
+        this.square = square;
+    }
 }
