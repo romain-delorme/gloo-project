@@ -9,5 +9,8 @@ public class BlocElementaire {
 
     @objid ("92a5a81b-8e90-4d9c-9ae6-5b37eb1af865")
     private Block block;
-
+    
+    public String toString() {
+    	return this.block.toString();
+    }
 }
