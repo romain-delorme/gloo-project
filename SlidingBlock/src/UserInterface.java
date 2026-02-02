@@ -1,6 +1,10 @@
 import control.*;
 import metier.*;
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
 
 public class UserInterface {
 	/*
@@ -14,7 +18,7 @@ public class UserInterface {
 
 	//#region create test boards
 
-	public Board createBoard(int[][] map){
+	public static Board createBoard(int[][] map){
 		/*
 		The "map" argument is a matrix where each element corresponds to a square (symbolized by the AbstractSqaure class).
 		We can match map[i][j] with a Board object according to the following logic (note that map[i][j] contains the element at Position(i, j)):
@@ -38,18 +42,18 @@ public class UserInterface {
 		for(int i=0; i<nbRows; i++){
 			for(int j=0; j<nbColumns; j++){
 				Position currentPos = new Position(i, j);
-				int val = map[i][j]
+				int val = map[i][j];
 				switch(val){
 					case -3: //exit
 						squares.put(currentPos, new Exit(currentPos, b));
 					break;
 
 					case -2: //wall
-						squares.put(currentPos, new Wall(currentPos, b))
+						squares.put(currentPos, new Wall(currentPos, b));
 					break;
 
 					case -1: //empty square
-						squares.put(currentPos, new Square(currentPos, b))
+						squares.put(currentPos, new Square(currentPos, b));
 					break;
 
 					default: //bloc élémentaire
@@ -58,8 +62,8 @@ public class UserInterface {
 						Square square = new Square(currentPos, b);
 						BlocElementaire element = new BlocElementaire(square);
 
-						if(!currentBlock){
-							List<BlocElementaire> elts = new List<BlocElementaire>();
+						if(currentBlock == null){
+							List<BlocElementaire> elts = new ArrayList<BlocElementaire>();
 							elts.add(element);
 							currentBlock = new Block(val, elts);
 							element.setBlock(currentBlock);
@@ -86,7 +90,7 @@ public class UserInterface {
 
 	// first test board: 5x5 board with only single-square blocks
 
-	int[][] map1 = {
+	static int[][] map1 = {
 		{-2, -2, -2, -2, -2},
 		{-2, +0, -1, -1, -3},
 		{-2, +2, +3, +4, -2},
@@ -97,9 +101,8 @@ public class UserInterface {
 	//#endregion
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner input = new Scanner(System.in);
-		System.out.println(input.nextLine());
+		Board test1 = createBoard(map1);
+		System.out.println(test1);
 	}
 
 }
