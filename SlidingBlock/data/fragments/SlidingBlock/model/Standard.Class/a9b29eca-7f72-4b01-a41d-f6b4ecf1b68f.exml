@@ -234,6 +234,24 @@ Position other = (Position) obj;
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="Position" mc="Standard.Operation" uid="a175ff6b-2dfe-4866-94d9-83396c48dc31"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Position]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Infrastructure.Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
@@ -260,7 +278,7 @@ Position other = (Position) obj;
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="189b3179-aeb9-477b-a721-7585e3d87d59"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="c09a5e79-cd2f-4991-b7f1-e2589b372d0f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -314,7 +332,7 @@ Position other = (Position) obj;
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="ab3c2f0d-10ff-487d-bd9d-7a2686969a9a"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="7c8f6daa-4cfc-4be1-9c63-72556b3db73c"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>

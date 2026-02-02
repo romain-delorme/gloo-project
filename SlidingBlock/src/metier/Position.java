@@ -33,4 +33,8 @@ public class Position {
         return column == other.column && row == other.row;
     }
 
+    @objid ("a175ff6b-2dfe-4866-94d9-83396c48dc31")
+    public Position() {
+    }
+
 }
