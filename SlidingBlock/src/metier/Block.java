@@ -15,4 +15,13 @@ public class Block {
     public String toString() {
     	return "" + this.number;
     }
+
+    public Block(int number, List<BlocElementaire> elements){
+        this.number = number;
+        this.elements = elements;
+    }
+
+    public List<BlocElementaire> getElements(){
+        return this.elements;
+    }
 }

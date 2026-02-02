@@ -29,8 +29,9 @@ public class Board {
     }
     
     public String toString() {
+        // this display function assumes that the "squares" hashmap is fully complete, otherwise it throws a null pointer exception
+
     	String result = "";
-    	
     	for(int i=0; i<this.nbRows; i++) {
     		result += "| ";
     		for(int j=0; j<this.nbColumns; j++) {
@@ -41,4 +42,22 @@ public class Board {
     	return result;
     }
 
+    public Board(int nbRows, int nbColumns, Map<Position, AbstractSquare> squares, Map<Integer, Block> blocks){
+        this.nbRows = nbRows;
+        this.nbColumns = nbColumns;
+        this.squares = squares;
+        this.blocks = blocks;
+    }
+    public Board(int nbRows, int nbColumns){
+        this.nbRows = nbRows;
+        this.nbColumns = nbColumns;
+    }
+
+    public void setSquares(Map<Position, AbstractSquare> squares){
+        this.squares = squares;
+    }
+
+    public void setBlocks(Map<Integer, Block> blocks){
+        this.blocks = blocks;
+    }
 }
