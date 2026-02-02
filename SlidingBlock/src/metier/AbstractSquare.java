@@ -12,5 +12,9 @@ public abstract class AbstractSquare {
 
     @objid ("2219bf08-44ca-4c69-89b4-c8cae4e89eec")
     protected BlocElementaire blocElementaire;
+    
+    public String toString() {
+    	return this.blocElementaire.toString();
+    }
 
 }

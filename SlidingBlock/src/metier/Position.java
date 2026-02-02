@@ -34,7 +34,9 @@ public class Position {
     }
 
     @objid ("a175ff6b-2dfe-4866-94d9-83396c48dc31")
-    public Position() {
+    public Position(int row, int col) {
+    	this.column = col;
+    	this.row = row;
     }
 
 }

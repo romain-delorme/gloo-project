@@ -27,5 +27,18 @@ public class Board {
     @objid ("4e5f7261-7d95-4f56-b6cc-c80d8459f39d")
     public void getCase(final Position p11) {
     }
+    
+    public String toString() {
+    	String result = "";
+    	
+    	for(int i=0; i<this.nbRows; i++) {
+    		result += "| ";
+    		for(int j=0; j<this.nbColumns; j++) {
+    			result += this.squares.get(new Position(i, j)).toString() + " | ";
+    		}
+    		result += "\n";
+    	}
+    	return result;
+    }
 
 }

@@ -12,4 +12,7 @@ public class Block {
     @objid ("3fad99e1-31a9-4fa9-aefc-4256ef5ec9f0")
     private List<BlocElementaire> elements = new ArrayList<BlocElementaire> ();
 
+    public String toString() {
+    	return "" + this.number;
+    }
 }
