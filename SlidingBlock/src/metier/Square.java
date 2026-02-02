@@ -10,17 +10,17 @@ public class Square extends AbstractSquare {
 
     public String toString() {
         // if the block associated with a square is null, this means that said square is empty
-        if (this.blocElementaire) return this.blocElementaire.toString();
+        if (this.blocElementaire != null) return this.blocElementaire.toString();
     	return "V";
     }
 
     public Square(Position position, Board board, BlocElementaire blocElementaire){
-        super.position = position;
+        super.setPosition(position);
         super.board = board;
         super.blocElementaire = blocElementaire;
     }
     public Square(Position position, Board board){
-        super.position = position;
+        super.setPosition(position);
         super.board = board;
         super.blocElementaire = null;
     }

@@ -9,7 +9,7 @@ public class Wall extends AbstractSquare {
     }
 
     public Wall(Position position, Board board){
-        super.position = position;
+        super.setPosition(position);
         super.board = board;
         super.blocElementaire = null;
     }

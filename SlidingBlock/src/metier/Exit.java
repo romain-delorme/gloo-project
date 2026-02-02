@@ -9,7 +9,7 @@ public class Exit extends AbstractSquare {
 	}
 
 	public Exit(Position position, Board board){
-        super.position = position;
+        super.setPosition(position);
         super.board = board;
         super.blocElementaire = null;
     }
