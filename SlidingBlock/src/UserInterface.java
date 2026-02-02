@@ -76,6 +76,7 @@ public class UserInterface {
 						}
 
 						square.setBlocElementaire(element);
+						squares.put(currentPos, square);
 					break;
 				}
 			}
