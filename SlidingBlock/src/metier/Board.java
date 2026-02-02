@@ -20,4 +20,12 @@ public class Board {
     @objid ("0e6abeae-5246-471f-9ed4-dc48b96d0573")
     private Map<Integer, Block> blocks = new HashMap<Integer, Block> ();
 
+    @objid ("1e6e413d-51c2-4ac6-be58-d57091e10fef")
+    public void getBloc(final int row, final int column) {
+    }
+
+    @objid ("4e5f7261-7d95-4f56-b6cc-c80d8459f39d")
+    public void getCase(final Position p11) {
+    }
+
 }
