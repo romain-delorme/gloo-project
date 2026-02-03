@@ -24,4 +24,8 @@ public class Block {
     public List<BlocElementaire> getElements(){
         return this.elements;
     }
+
+    public int getNumber(){
+        return this.number;
+    }
 }

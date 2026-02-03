@@ -21,7 +21,11 @@ public class Board {
     private Map<Integer, Block> blocks = new HashMap<Integer, Block> ();
 
     @objid ("1e6e413d-51c2-4ac6-be58-d57091e10fef")
-    public void getBloc(final int row, final int column) {
+    public Block getBloc(final int row, final int column) {
+        AbstractSqaure selected = this.squares.get(new Position(row, column));
+        BlocElementaire content = selected.getBlocElementaire();
+        if (content != null) return content.getBlock();
+        return null;
     }
 
     @objid ("4e5f7261-7d95-4f56-b6cc-c80d8459f39d")
@@ -59,5 +63,21 @@ public class Board {
 
     public void setBlocks(Map<Integer, Block> blocks){
         this.blocks = blocks;
+    }
+
+    public int getNbRows(){
+        return this.nbRows;
+    }
+
+    public int getNbColumns(){
+        return this.nbColumns;
+    }
+
+    public Map<Position, AbstractSquare> getSquares(){
+        return this.squares;
+    }
+
+    public Map<Integer, Block> getBlocks(){
+        return this.blocks;
     }
 }

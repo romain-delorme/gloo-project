@@ -16,4 +16,12 @@ public abstract class AbstractSquare {
     public void setPosition(Position position) {
     	this.position = position;
     }
+
+    public Position getPosition(){
+        return this.position;
+    }
+
+    public BlocElementaire getBlocElementaire(){
+        return this.blocElementaire;
+    }
 }
