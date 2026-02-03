@@ -90,10 +90,11 @@ public class Controller implements IControleur{
         int blockSize = currentBlock.getElements().size();
         int[][] result = new int[blockSize][2];
 
-        BlocElementaire[] elementsArray = (BlocElementaire[]) currentBlock.getElements().toArray();
+        Object[] elementsArray = currentBlock.getElements().toArray();
         for(int i=0; i<blockSize; i++){
-            result[i][0] = elementsArray[i].getSquare().getPosition().getRow();
-            result[i][1] = elementsArray[i].getSquare().getPosition().getColumn();
+        	BlocElementaire elt = (BlocElementaire) elementsArray[i];
+            result[i][0] = elt.getSquare().getPosition().getRow();
+            result[i][1] = elt.getSquare().getPosition().getColumn();
         }
         return result;
     }
