@@ -1,7 +1,7 @@
-package gloo.projet.controle;
+package control;
 
-import gloo.projet.metier.ContenuPlateau;
-import gloo.projet.metier.Direction;
+import metier.ContenuPlateau;
+import metier.Direction;
 
 /**
  * Interface du controleur pour le jeu SlidingBloc.

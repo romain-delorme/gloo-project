@@ -1,4 +1,4 @@
-package gloo.projet.controle;
+package control;
 
 import metier.*;
 
@@ -84,16 +84,16 @@ public class ControleurBouchon implements IControleur {
     public void action(Direction direction) {
     	if (blocSelectionne == 1) return;
     	switch (direction) {
-    	case HAUT:
+    	case UP:
     		if (positionBloc0 == 1) positionBloc0 = 0;
     		break;
-    	case BAS:
+    	case DOWN:
     		if (positionBloc0 == 0) positionBloc0 = 1;
     		break;
-    	case DROITE:
+    	case RIGHT:
     		if (positionBloc0 == 0) fin = true;
     		break;
-		case GAUCHE:
+		case LEFT:
 			break;
     	}
     }

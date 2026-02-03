@@ -1,4 +1,4 @@
-package gloo.projet.metier;
+package metier;
 
 
 /**

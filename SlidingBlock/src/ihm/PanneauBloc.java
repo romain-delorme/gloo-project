@@ -1,4 +1,4 @@
-package gloo.projet.ihm;
+package ihm;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -11,8 +11,8 @@ import java.awt.event.MouseListener;
 import java.awt.geom.Area;
 import java.awt.geom.PathIterator;
 import javax.swing.JPanel;
-import gloo.projet.controle.IControleur;
-import gloo.projet.metier.Direction;
+import control.IControleur;
+import metier.Direction;
 
 /**
  * Panneau de l'IHM pour le jeu SlidingBloc.
@@ -107,10 +107,10 @@ public class PanneauBloc extends JPanel implements MouseListener {
                     Direction direction_courante = null;
                     int x_precedent = polygon.xpoints[j - 1];
                     int y_precedent = polygon.ypoints[j - 1];
-                    if ((x_precedent == x) && (y_precedent <  y)) direction_courante = Direction.BAS;
-                    if ((x_precedent == x) && (y_precedent >  y)) direction_courante = Direction.HAUT;
-                    if ((x_precedent <  x) && (y_precedent == y)) direction_courante = Direction.DROITE;
-                    if ((x_precedent >  x) && (y_precedent == y)) direction_courante = Direction.GAUCHE;
+                    if ((x_precedent == x) && (y_precedent <  y)) direction_courante = Direction.DOWN;
+                    if ((x_precedent == x) && (y_precedent >  y)) direction_courante = Direction.UP;
+                    if ((x_precedent <  x) && (y_precedent == y)) direction_courante = Direction.RIGHT;
+                    if ((x_precedent >  x) && (y_precedent == y)) direction_courante = Direction.LEFT;
                      Direction direction_suivante = null;
                      int x_suivant = polygon.xpoints[0];
                      int y_suivant = polygon.ypoints[0];
@@ -118,29 +118,29 @@ public class PanneauBloc extends JPanel implements MouseListener {
                          x_suivant = polygon.xpoints[j + 1];
                          y_suivant = polygon.ypoints[j + 1];
                      }
-                     if ((x == x_suivant) && (y <  y_suivant)) direction_suivante = Direction.BAS;
-                     if ((x == x_suivant) && (y >  y_suivant)) direction_suivante = Direction.HAUT;
-                     if ((x <  x_suivant) && (y == y_suivant)) direction_suivante = Direction.DROITE;
-                     if ((x >  x_suivant) && (y == y_suivant)) direction_suivante = Direction.GAUCHE;
+                     if ((x == x_suivant) && (y <  y_suivant)) direction_suivante = Direction.DOWN;
+                     if ((x == x_suivant) && (y >  y_suivant)) direction_suivante = Direction.UP;
+                     if ((x <  x_suivant) && (y == y_suivant)) direction_suivante = Direction.RIGHT;
+                     if ((x >  x_suivant) && (y == y_suivant)) direction_suivante = Direction.LEFT;
                      switch (direction_courante) {
-                     case BAS:
+                     case DOWN:
                          x += AJUSTEMENT_INTERIEUR_BLOC;
-                         if (direction_suivante == Direction.DROITE) y -= AJUSTEMENT_INTERIEUR_BLOC;
+                         if (direction_suivante == Direction.RIGHT) y -= AJUSTEMENT_INTERIEUR_BLOC;
                          else                                        y += AJUSTEMENT_INTERIEUR_BLOC;
                          break;
-                     case HAUT:
+                     case UP:
                          x -= AJUSTEMENT_INTERIEUR_BLOC;
-                         if (direction_suivante == Direction.GAUCHE) y += AJUSTEMENT_INTERIEUR_BLOC;
+                         if (direction_suivante == Direction.LEFT) y += AJUSTEMENT_INTERIEUR_BLOC;
                          else                                        y -= AJUSTEMENT_INTERIEUR_BLOC;
                          break;
-                     case DROITE:
+                     case RIGHT:
                          y -= AJUSTEMENT_INTERIEUR_BLOC;
-                         if (direction_suivante == Direction.HAUT)   x -= AJUSTEMENT_INTERIEUR_BLOC;
+                         if (direction_suivante == Direction.UP)   x -= AJUSTEMENT_INTERIEUR_BLOC;
                          else                                        x += AJUSTEMENT_INTERIEUR_BLOC;
                          break;
-                     case GAUCHE:
+                     case LEFT:
                          y += AJUSTEMENT_INTERIEUR_BLOC;
-                         if (direction_suivante == Direction.BAS)    x += AJUSTEMENT_INTERIEUR_BLOC;
+                         if (direction_suivante == Direction.DOWN)    x += AJUSTEMENT_INTERIEUR_BLOC;
                          else                                        x -= AJUSTEMENT_INTERIEUR_BLOC;
                          break;
                      default:
