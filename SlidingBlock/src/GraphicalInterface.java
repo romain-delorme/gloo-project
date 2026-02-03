@@ -82,23 +82,75 @@ public class GraphicalInterface implements Runnable {
 	}
 
 	// first test board: 5x5 board with only single-square blocks
-	static int[][] map1 = {
-		{-2, -2, -2, -2, -2},
-		{-2, +0, +0, -1, -3},
-		{-2, +2, +3, +4, -2},
-		{-2, +1, -1, -1, -2},
-		{-2, -2, -2, -2, -2}
+	static int[][][] testMaps = {
+		{
+			{-2, -2, -2, -2, -2},
+			{-2, +0, +0, -1, -3},
+			{-2, +2, +3, +4, -2},
+			{-2, +1, -1, -1, -2},
+			{-2, -2, -2, -2, -2}
+		},
+		{
+			{-2, -2, -2, -2, -2},
+			{-2, +0, +0, -1, -3},
+			{-2, +0, -1, -1, -3},
+			{-2, -1, -1, -1, -2},
+			{-2, -2, -2, -2, -2}
+		},
+		{
+			{-2, -2, -2, -2, -2},
+			{-2, -1, +0, -1, -3},
+			{-2, +0, +0, -1, -3},
+			{-2, +0, +1, -1, -2},
+			{-2, -1, -1, -1, -2},
+			{-2, -1, -1, -1, -2},
+			{-2, -1, -1, -1, -2},
+			{-2, -2, -2, -2, -2}
+		}
+	};
+
+	static int[][][] easyMaps = {
+
+	};
+
+	static int[][][] mediumMaps = {
+
+	};
+
+	static int[][][] hardMaps = {
+
 	};
 	
 	//#endregion
 
+	static int[][] selectedMap = testMaps[0]
+
 	public static void main(String[] args) {
+		int mapSet = -1;
+		int mapId = -1;
+		int[][][][] allMaps = {testMaps, easyMaps, mediumMaps, hardMaps};
+		Scanner input = new Scanner(system.in);
+		while(mapSet<0 || mapSet>3){
+			System.out.println("Choisissez votre jeu de niveaux (0: test, 1: facile, 2: moyen, 3: difficile)");
+			mapSet = input.nextInt();
+			if (mapSet<0 || mapSet>3) 
+				System.out.println("Veuillez choisir un nombre entre 1 et 3");
+		}
+		while(mapId<0 || mapId > allMaps[mapSet].length){
+			System.out.println("Choisissez votre niveau (0-" + allMaps[mapSet].length + ")");
+			mapId = input.nextInt();
+			if (mapId<0 || mapId > allMaps[mapSet].length)
+				System.out.println("Veuillez choisir un nombre entre 1 et 3");
+		}
+
+		selectedMap = allMaps[mapSet][mapId];
+
         SwingUtilities.invokeLater(new GraphicalInterface());
 
 	}
 
 	@Override
     public void run() {
-        new FenetreBloc( new Controller(createBoard(map1)) );
+        new FenetreBloc( new Controller(createBoard(selectedMap)) );
     }
 }
