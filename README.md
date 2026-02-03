@@ -8,6 +8,6 @@ This project was realized in pair for an assignement in Object-Oriented Programm
 
 You can play the game following these steps : 
 
-* [Go inside SlidingBlock/src]
-* [Run GraphicalInterface.java or TextInterface.java]
-* [You are all set you can play the game for hours]
+* Go inside SlidingBlock/src
+* Run GraphicalInterface.java or TextInterface.java
+* You are all set you can play the game for hours
