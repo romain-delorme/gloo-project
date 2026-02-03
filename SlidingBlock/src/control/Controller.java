@@ -98,4 +98,7 @@ public class Controller implements IControleur{
         return result;
     }
 
+    public Controller(Board b){
+        this.board = b;
+    }
 }
