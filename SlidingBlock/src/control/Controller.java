@@ -1,5 +1,7 @@
 package control;
 
+import java.util.Map;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import metier.*;
 
