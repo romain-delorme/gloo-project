@@ -21,4 +21,12 @@ public class BlocElementaire {
     public BlocElementaire(AbstractSquare square){
         this.square = square;
     }
+
+    public Block getBlock(){
+        return this.block;
+    }
+
+    public AbstractSquare getSquare(){
+        return this.square;
+    }
 }
