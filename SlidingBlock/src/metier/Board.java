@@ -22,7 +22,7 @@ public class Board {
 
     @objid ("1e6e413d-51c2-4ac6-be58-d57091e10fef")
     public Block getBloc(final int row, final int column) {
-        AbstractSqaure selected = this.squares.get(new Position(row, column));
+        AbstractSquare selected = this.squares.get(new Position(row, column));
         BlocElementaire content = selected.getBlocElementaire();
         if (content != null) return content.getBlock();
         return null;

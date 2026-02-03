@@ -26,7 +26,7 @@ public class BlocElementaire {
         return this.block;
     }
 
-    public AbstractSqaure getSquare(){
+    public AbstractSquare getSquare(){
         return this.square;
     }
 }
