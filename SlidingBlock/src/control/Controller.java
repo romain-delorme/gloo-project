@@ -68,7 +68,7 @@ public class Controller implements IControleur{
         if(canMove){
             int i=0;
             // when going right or down, we need to iterate backwards to make sure that swaps are made in the right order
-            if (rowModifier > 0 || colModifier > 0) i=nbElements-1
+            if (rowModifier > 0 || colModifier > 0) i=nbElements-1;
 
             for(; i>=0 && i<nbElements; i -= (rowModifier + colModifier)){
                 int currentRow = positions[i][0];
@@ -86,9 +86,9 @@ public class Controller implements IControleur{
                 AbstractSquare target = squares.get(newPos);
 
                 target.setPosition(currentPos);
-                // source.setPosition(newPos);
+                source.setPosition(newPos);
                 squares.put(newPos, source);
-                // squares.put(currentPos, target);
+                squares.put(currentPos, target);
             }
             this.fin = isWinningMove;
         }
