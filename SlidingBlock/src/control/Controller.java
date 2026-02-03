@@ -73,24 +73,24 @@ public class Controller implements IControleur{
         return this.board.getNbColumns();
     }
 
-    ContenuPlateau getContenu(int ligne, int colonne){
-        AbstractSqaure square = this.board.getSquares().get(new Position(ligne, colonne));
-        if (square instanceof Square) return CASE;
-        if (square instanceof Wall) return MUR;
-        if (square instanceof Exit) return SORTIE;
+    public ContenuPlateau getContenu(int ligne, int colonne){
+        AbstractSquare square = this.board.getSquares().get(new Position(ligne, colonne));
+        if (square instanceof Square) return ContenuPlateau.CASE;
+        if (square instanceof Wall) return ContenuPlateau.MUR;
+        if (square instanceof Exit) return ContenuPlateau.SORTIE;
         return null;
     }
 
-    int getNbBlocs(){
-        return this.board.getBlocks().keySet().size()
+    public int getNbBlocs(){
+        return this.board.getBlocks().keySet().size();
     }
 
-    int[][] getPositionsBloc(int numero){
+    public int[][] getPositionsBloc(int numero){
         Block currentBlock = this.board.getBlocks().get(numero);
         int blockSize = currentBlock.getElements().size();
         int[][] result = new int[blockSize][2];
 
-        BlocElementaire[] elementsArray = currentBlock.getElements().toArray();
+        BlocElementaire[] elementsArray = (BlocElementaire[]) currentBlock.getElements().toArray();
         for(int i=0; i<blockSize; i++){
             result[i][0] = elementsArray[i].getSquare().getPosition().getRow();
             result[i][1] = elementsArray[i].getSquare().getPosition().getColumn();
