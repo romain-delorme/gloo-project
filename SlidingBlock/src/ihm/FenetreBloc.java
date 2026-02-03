@@ -1,12 +1,12 @@
-package gloo.projet.ihm;
+package ihm;
 
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import gloo.projet.controle.IControleur;
-import gloo.projet.metier.Direction;
+import control.IControleur;
+import metier.Direction;
 
 /**
  * Fenêtre de l'IHM pour le jeu SlidingBloc.
@@ -43,19 +43,19 @@ public class FenetreBloc extends JFrame implements KeyListener {
         switch( e.getKeyCode() ) {
         case KeyEvent.VK_UP:
         case KeyEvent.VK_KP_UP:
-            direction = Direction.HAUT;
+            direction = Direction.UP;
             break;
         case KeyEvent.VK_DOWN:
         case KeyEvent.VK_KP_DOWN:
-            direction = Direction.BAS;
+            direction = Direction.DOWN;
             break;
         case KeyEvent.VK_LEFT:
         case KeyEvent.VK_KP_LEFT:
-            direction = Direction.GAUCHE;
+            direction = Direction.LEFT;
             break;
         case KeyEvent.VK_RIGHT:
         case KeyEvent.VK_KP_RIGHT:
-            direction = Direction.DROITE;
+            direction = Direction.RIGHT;
             break;
         }
         if( direction == null ) return;

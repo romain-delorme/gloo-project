@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
+import javax.swing.SwingUtilities;
+import ihm.FenetreBloc;
 
 public class GraphicalInterface implements Runnable {
 	//#region create test boards
@@ -91,12 +93,12 @@ public class GraphicalInterface implements Runnable {
 	//#endregion
 
 	public static void main(String[] args) {
-        SwingUtilities.invokeLater(new TestIHM());
+        SwingUtilities.invokeLater(new GraphicalInterface());
 
 	}
 
 	@Override
     public void run() {
-        new FenetreBloc( new ControleurBouchon() );
+        new FenetreBloc( new Controller() );
     }
 }
