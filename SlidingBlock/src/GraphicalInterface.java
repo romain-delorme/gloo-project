@@ -99,6 +99,6 @@ public class GraphicalInterface implements Runnable {
 
 	@Override
     public void run() {
-        new FenetreBloc( new Controller() );
+        new FenetreBloc( new Controller(createBoard(map1)) );
     }
 }
