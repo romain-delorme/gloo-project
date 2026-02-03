@@ -16,8 +16,8 @@ import metier.Direction;
  */
 @SuppressWarnings("serial")
 public class FenetreBloc extends JFrame implements KeyListener {
-    private static final int LARGEUR_FENETRE = 256;
-    private static final int HAUTEUR_FENETRE = 320;
+    private static final int LARGEUR_FENETRE = 8*64;
+    private static final int HAUTEUR_FENETRE = 8*64;
     private static final int HAUTEUR_TITRE_FENETRE = 20;
 
     private IControleur controleur;

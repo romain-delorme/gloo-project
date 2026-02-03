@@ -180,10 +180,10 @@ public class GraphicalInterface implements Runnable {
 				System.out.println("Veuillez choisir un nombre entre 0 et 3");
 		}
 		while(mapId<0 || mapId >= allMaps[mapSet].length){
-			System.out.println("Choisissez votre niveau (0-" + allMaps[mapSet].length - 1 + ")");
+			System.out.println("Choisissez votre niveau (0-" + (allMaps[mapSet].length - 1) + ")");
 			mapId = input.nextInt();
 			if (mapId<0 || mapId >= allMaps[mapSet].length)
-				System.out.println("Veuillez choisir un nombre entre 0 et " + allMaps[mapSet].length - 1);
+				System.out.println("Veuillez choisir un nombre entre 0 et " + (allMaps[mapSet].length - 1));
 		}
 
 		selectedMap = allMaps[mapSet][mapId];
