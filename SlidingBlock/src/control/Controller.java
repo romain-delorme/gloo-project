@@ -20,7 +20,8 @@ public class Controller implements IControleur{
 
     @objid ("ae7a1763-049d-4014-aecf-9cb5da605fd5")
     public void action(final Direction direction) {
-        boolean canMove = false;
+        boolean canMove = true;
+        boolean isWinningMove = false;
         int rowModifier = 0;
         int colModifier = 0;
 
@@ -44,16 +45,47 @@ public class Controller implements IControleur{
 
         int[][] positions = this.getPositionsBloc(selectedBlock.getNumber());
         int nbElements = positions.length;
+        Map<Position, AbstractSquare> squares = this.board.getSquares();
 
+        // first, we iterate over every element from block to check the target square
         for(int i=0; i<nbElements; i++){
             int currentRow = positions[i][0];
             int currentCol = positions[i][1];
 
             int newRow = currentRow + rowModifier;
             int newCol = currentCol + colModifier;
+
+            AbstractSquare target = squares.get(new Position(newRow, newCol));
+
+            if (target instanceof Wall) canMove = false;
+            else if (target instanceof Exit) isWinningMove = true;
+            else if ((target.getBlocElementaire() != null) && (target.getBlocElementaire().getBlock().getNumber() != selectedBlock.getNumber())) canMove = false;
         }
 
-        // TODO       
+        // then, if the move is allowed, we update the board
+        if(canMove){
+            for(int i=0; i<nbElements; i++){
+                int currentRow = positions[i][0];
+                int currentCol = positions[i][1];
+
+                int newRow = currentRow + rowModifier;
+                int newCol = currentCol + colModifier;
+
+                Position currentPos = new Position(currentRow, currentCol);
+                Position newPos = new Position(newRow, newCol);
+
+                
+
+                AbstractSquare source = squares.get(currentPos);
+                AbstractSquare target = squares.get(newPos);
+
+                target.setPosition(currentPos);
+                source.setPosition(newPos);
+                squares.put(newPos, source);
+                squares.put(currentPos, target);
+            }
+            this.fin = isWinningMove;
+        }
     }
 
     public int getNumeroBlocSelectionne(){
@@ -91,6 +123,7 @@ public class Controller implements IControleur{
         int[][] result = new int[blockSize][2];
 
         Object[] elementsArray = currentBlock.getElements().toArray();
+        // can't cast directly to BlocElementaire[] for some reason
         for(int i=0; i<blockSize; i++){
         	BlocElementaire elt = (BlocElementaire) elementsArray[i];
             result[i][0] = elt.getSquare().getPosition().getRow();
