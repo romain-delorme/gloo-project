@@ -22,6 +22,7 @@ public class Controller implements IControleur{
 
     @objid ("ae7a1763-049d-4014-aecf-9cb5da605fd5")
     public void action(final Direction direction) {
+        if (this.selectedBlock == null) return;
         boolean canMove = true;
         boolean isWinningMove = false;
         int rowModifier = 0;
